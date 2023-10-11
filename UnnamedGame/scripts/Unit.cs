@@ -6,7 +6,6 @@ public partial class Unit : CharacterBody2D
 {
 	[Export] private int speed { get; set; } = 400;
 	public bool isSelected;
-
 	public Vector2 movementTarget;
 
 	public override void _Ready()

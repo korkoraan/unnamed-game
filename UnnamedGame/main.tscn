@@ -1,17 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://2sj1mlgl0onq"]
+[gd_scene load_steps=7 format=3 uid="uid://2sj1mlgl0onq"]
 
 [ext_resource type="Script" path="res://scripts/Main.cs" id="1_tetfx"]
+[ext_resource type="Script" path="res://scripts/MainCamera.cs" id="2_44x0f"]
 [ext_resource type="PackedScene" uid="uid://c1mwmv02hayu2" path="res://units/default_unit.tscn" id="2_ya28g"]
 [ext_resource type="Script" path="res://scripts/UnitManager.cs" id="3_rcty1"]
+[ext_resource type="Script" path="res://scripts/Player.cs" id="5_onhox"]
 [ext_resource type="Script" path="res://scripts/SelectionArea.cs" id="6_odecf"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_tetfx")
 
 [node name="Map" type="Node2D" parent="."]
-
-[node name="MainCamera" type="Camera2D" parent="."]
-position = Vector2(595, 337)
 
 [node name="SelectionArea" type="Node2D" parent="."]
 script = ExtResource("6_odecf")
@@ -21,3 +20,11 @@ _color = Color(0.945098, 0.807843, 0, 1)
 position = Vector2(1, 0)
 script = ExtResource("3_rcty1")
 _defaultUnit = ExtResource("2_ya28g")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("5_onhox")
+
+[node name="MainCamera" type="Camera2D" parent="Player"]
+position = Vector2(595, 337)
+script = ExtResource("2_44x0f")
+_zoomSpeed = 1.1
