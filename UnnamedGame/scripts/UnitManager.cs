@@ -11,14 +11,12 @@ public partial class UnitManager : Node2D
     
     public override void _Ready()
     {
-        // SelectionArea.UnitsSelectedHandler += SetSelectedUnitsMovementTarget;
     }
     
     public override void _Input(InputEvent @event)
 	{
 		if (@event.IsActionPressed("left_click"))
 		{
-			
 		}
 		if (@event.IsActionPressed("right_click"))
 		{
